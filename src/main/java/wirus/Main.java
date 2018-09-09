@@ -1,6 +1,7 @@
 package wirus;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -29,7 +30,12 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) throws Exception {
 
-        for (int i = 0; i < 100; i++) {
+        spamAlerts();
+
+    }
+
+    private void spamAlerts() {
+        for (int i = 0; i < 1000; i++) {
             generateAlert(generateXPos(), generateYPos());
         }
     }
